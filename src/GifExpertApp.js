@@ -9,17 +9,17 @@ const GifExpertApp = () => {
     "death note",
   ]);
 
-  const handleAdd = () => {
-    // setCategories([...categories, "one punch"]);
-    setCategories((cats) => [...cats, "one punch"]);
-  };
+  // const handleAdd = () => {
+  // setCategories([...categories, "one punch"]);
+  //   setCategories((cats) => [...cats, "one punch"]);
+  // };
 
   return (
     <>
       <h2>Gif Expert App</h2>
-      <AddCategory />
+      <AddCategory setCategories={setCategories} />
       <hr />
-      <button onClick={handleAdd}> Agregar </button>
+      {/* <button onClick={handleAdd}> Agregar </button> */}
       <ol>
         {categories.map((category) => {
           return <li key={category}> {category}</li>;
